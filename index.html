@@ -1,91 +1,758 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>PPRO installer slideshow</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>سوقك الجديد | Güzel Kadın Dünyası</title>
+
+<meta name="description"
+content="سوقك الجديد - Güzel Kadın Dünyası - معلومات الشركة والخدمات وطرق التواصل">
+
 <style>
+:root {
+  --main: #995e78;
+  --dark: #302b30;
+  --gray: #817780;
+  --bg: #faf8f9;
+  --soft: #f8edf2;
+  --line: #ece4e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
-		background-color: #fff;
+  scroll-behavior: smooth;
 }
-* {box-sizing: border-box;}
+
 body {
-	margin:0px;}
-.mySlides {opacity: 0; position: absolute; transition: all 1s;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 445px;
-  position: relative;
-  margin: auto;
-  cursor: pointer;
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.8;
 }
 
-/* Caption text */
-.text {
-  font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #fff;
-  font-weight: 450;
+.container {
+  width: 92%;
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  background: white;
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 24px;
+  color: var(--main);
+  font-weight: bold;
+}
+
+.logo small {
+  display: block;
+  font-size: 12px;
+  color: var(--gray);
+  font-weight: normal;
+  direction: ltr;
+  text-align: right;
+}
+
+a {
+  color: var(--main);
+  text-decoration: none;
+}
+
+.hero {
+  background: white;
+  text-align: center;
+  padding: 65px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.symbol {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 22px;
+  background: var(--soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(31px, 6vw, 47px);
+  margin: 0;
+}
+
+.turkish {
+  direction: ltr;
+  color: var(--main);
+  font-weight: bold;
+}
+
+.hero .turkish {
+  font-size: clamp(21px, 4vw, 28px);
+  margin-top: 8px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--gray);
+  margin-top: 12px;
+}
+
+.hero p {
+  max-width: 550px;
+  margin: 22px auto;
   font-size: 15px;
-  letter-spacing: .3;
-  padding-left: 20px;
-  position: absolute;
-  bottom: 95px;
-  width: 30%;
+  color: var(--gray);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.tags span {
+  padding: 7px 16px;
+  background: var(--soft);
+  color: var(--main);
+  border-radius: 25px;
+  font-size: 13px;
+}
+
+main {
+  padding: 35px 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+
+.card h2 {
+  font-size: 19px;
+  margin: 0;
+  background: var(--soft);
+  padding: 14px 20px;
+  border-right: 4px solid var(--main);
+}
+
+.content {
+  padding: 12px 22px;
+}
+
+.company-names {
+  padding: 35px 15px;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-	font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #f2f2f2;
+.name1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.name2 {
+  font-size: 27px;
+  color: var(--main);
+  font-weight: bold;
+  direction: ltr;
+}
+
+.name3 {
+  font-size: 23px;
+  margin-top: 15px;
+}
+
+.name4 {
+  font-size: 18px;
+  color: var(--gray);
+  margin-top: 12px;
+}
+
+.name5 {
+  font-size: 17px;
+  color: var(--main);
+  font-weight: bold;
+  direction: ltr;
+  letter-spacing: 1px;
+  margin-top: 12px;
+}
+
+.name6 {
+  font-size: 16px;
+  color: var(--gray);
+  margin-top: 12px;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--main);
+  margin: 22px auto;
+}
+
+.name-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.name-grid div {
+  background: var(--soft);
+  color: var(--main);
+  padding: 16px;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.status {
+  color: #258052;
+}
+
+.contact {
+  background: var(--main);
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.contact .turkish {
+  color: white;
+  font-size: 19px;
+}
+
+.contact p {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.buttons a {
+  display: inline-block;
+  background: white;
+  color: var(--main);
+  padding: 11px 20px;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.note {
+  text-align: center;
   font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  color: var(--gray);
+  margin: 25px auto;
 }
 
-.active {
-  background-color: #717171;
+footer {
+  background: white;
+  border-top: 1px solid var(--line);
+  padding: 35px 15px;
+  text-align: center;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
+footer .arabic {
+  font-size: 27px;
+  font-weight: bold;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .7}
-  to {opacity: 1}
+footer .turkish {
+  font-size: 21px;
 }
 
-@keyframes fade {
-  from {opacity: .1}
-  to {opacity: 1}
+footer .small {
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 15px;
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+@media(max-width:600px) {
+  .hero {
+    padding: 45px 15px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .value {
+    text-align: right;
+  }
+
+  .content {
+    padding: 10px 16px;
+  }
+
+  .name-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .name1 {
+    font-size: 29px;
+  }
+
+  .name2 {
+    font-size: 22px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a {
+    width: 100%;
+  }
 }
 </style>
 </head>
+
 <body>
-<div class="slideshow-container" id="slideContainer" href="#">
 
-<div class="mySlides fade" style="opacity: 1; visibility: visible;">
-    <video class="videos" autoplay loop muted style="width: 445px; height: 239px;"><source src="images/01_creativity_for_all_445x239.mp4" style="width: 445px; height: 239px;"></video>
-    <div class="text" id="slideText1">Creativity for all.</div>
+<!-- HEADER -->
+
+<header>
+  <div class="container header-content">
+
+    <div class="logo">
+      سوقك الجديد
+      <small>Güzel Kadın Dünyası</small>
+    </div>
+
+    <a href="#contact">تواصل معنا</a>
+
+  </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="symbol">G</div>
+
+  <h1>سوقك الجديد</h1>
+
+  <div class="turkish">
+    Güzel Kadın Dünyası
+  </div>
+
+  <div class="subtitle">
+    عالم المرأة الجميلة
+  </div>
+
+  <p>
+    مرحبًا بكم في سوقك الجديد.
+    تعرفوا على معلومات نشاطنا التجاري
+    وخدمات التسويق الإلكتروني
+    وطرق التواصل معنا.
+  </p>
+
+  <div class="tags">
+    <span>سوقك الجديد</span>
+    <span>Güzel Kadın Dünyası</span>
+    <span>عالم المرأة الجميلة</span>
+    <span>GÜZEL</span>
+    <span>سوقك</span>
+  </div>
+
+</section>
+
+<main class="container">
+
+<!-- COMPANY NAMES -->
+
+<section class="card">
+
+  <h2>اسم الشركة بالعربية والتركية</h2>
+
+  <div class="company-names">
+
+    <div class="name1">
+      سوقك الجديد
+    </div>
+
+    <div class="name2">
+      Güzel Kadın Dünyası
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="name3">
+      عالم المرأة الجميلة
+    </div>
+
+    <div class="name4">
+      سوقك الجديد للمرأة
+    </div>
+
+    <div class="name5">
+      GÜZEL KADIN DÜNYASI
+    </div>
+
+    <div class="name6">
+      سوقك | Güzel
+    </div>
+
+    <div class="name6">
+      عالم الجمال والأناقة
+    </div>
+
+    <div class="name6">
+      سوقك الجديد - GÜZEL
+    </div>
+
+    <div class="name-grid">
+
+      <div>سوقك الجديد</div>
+
+      <div dir="ltr">
+        Güzel Kadın Dünyası
+      </div>
+
+      <div>عالم المرأة الجميلة</div>
+
+      <div dir="ltr">
+        GÜZEL KADIN
+      </div>
+
+    </div>
+
+    <p style="font-size:12px;color:#817780;margin-top:20px;">
+      الأسماء الإضافية صيغ عرض وترجمة،
+      وليست أسماء تجارية مسجلة بصورة مستقلة.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- COMPANY INFORMATION -->
+
+<section class="card">
+
+  <h2>معلومات الشركة</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">الاسم التجاري</span>
+      <span class="value">
+        Güzel Kadın Dünyası
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الاسم بالعربية</span>
+      <span class="value">
+        سوقك الجديد
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">رقم السجل التجاري</span>
+      <span class="value">
+        191899754
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الشكل القانوني</span>
+      <span class="value">
+        من الشركات الكبرى
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">حالة السجل حسب المستند</span>
+      <span class="value status">
+        نشط - Active
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ التسجيل</span>
+      <span class="value">
+        2023/04/20
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">استثمار أجنبي</span>
+      <span class="value">
+        نعم - Yes
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ انتهاء السجل</span>
+      <span class="value">
+        11/12/2028
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LICENSE INFORMATION -->
+
+<section class="card">
+
+  <h2>معلومات النشاط والترخيص</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">رقم الترخيص</span>
+      <span class="value">
+        L2876667
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تعريف الترخيص</span>
+      <span class="value">
+        LD-11
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">النشاط المسجل</span>
+      <span class="value">
+        خدمات الترويج والتسويق
+        على المواقع الإلكترونية
+        ووسائل التواصل الاجتماعي
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">مدة الترخيص</span>
+      <span class="value">
+        12 شهرًا
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الإصدار الأول</span>
+      <span class="value">
+        25/06/2023
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ الإصدار</span>
+      <span class="value">
+        2024/08/20
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ انتهاء الترخيص</span>
+      <span class="value">
+        11/12/2028
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT INFORMATION -->
+
+<section class="card">
+
+  <h2>معلومات التواصل</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">رقم الهاتف</span>
+      <span class="value">
+        <a href="tel:+966534899957">
+          +966534899957
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">البريد الإلكتروني</span>
+      <span class="value">
+        <a href="mailto:admin@g9kf.github.io">
+          admin@g9kf.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الموقع الإلكتروني</span>
+      <span class="value">
+        <a href="https://g9kf.github.io"
+           target="_blank"
+           rel="noopener noreferrer">
+          g9kf.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">العنوان</span>
+      <span class="value">
+        طريق الملك سلمان،
+        العليا، الخرج،
+        11267،
+        المملكة العربية السعودية
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الرمز البريدي</span>
+      <span class="value">
+        11267
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact" id="contact">
+
+  <h2>تواصل مع سوقك الجديد</h2>
+
+  <div class="turkish">
+    Güzel Kadın Dünyası
+  </div>
+
+  <p>
+    يسعدنا استقبال استفساراتكم
+    والتواصل معكم.
+  </p>
+
+  <div class="buttons">
+
+    <a href="tel:+966534899957">
+      اتصال هاتفي
+    </a>
+
+    <a href="mailto:admin@g9kf.github.io">
+      البريد الإلكتروني
+    </a>
+
+    <a href="https://wa.me/966534899957"
+       target="_blank"
+       rel="noopener noreferrer">
+      واتساب
+    </a>
+
+    <a href="https://g9kf.github.io"
+       target="_blank"
+       rel="noopener noreferrer">
+      زيارة الموقع
+    </a>
+
+  </div>
+
+</section>
+
+<div class="note">
+  هذه صفحة تعريفية تعرض البيانات الواردة
+  في المستند المرفق دون تحقق مستقل.
+  وليست شهادة رسمية أو وسيلة حكومية للتحقق
+  من صحة التسجيل أو الترخيص.
 </div>
 
-</div>
+</main>
 
-<script type="text/javascript" src="lib/jquery.min.js"></script>
-<script type="text/javascript" src="carousel.js"></script>
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="arabic">
+    سوقك الجديد
+  </div>
+
+  <div class="turkish">
+    Güzel Kadın Dünyası
+  </div>
+
+  <div class="small">
+    عالم المرأة الجميلة
+    <br>
+    GÜZEL KADIN DÜNYASI
+    <br>
+    © 2026 Güzel Kadın Dünyası
+    <br>
+    g9kf.github.io
+    <br>
+    Al-Kharj, Saudi Arabia - 11267
+  </div>
+
+</footer>
+
 </body>
 </html>
